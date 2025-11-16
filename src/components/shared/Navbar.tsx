@@ -13,7 +13,7 @@ const Navbar = () => {
   );
   return (
     <nav className="max-lg:hidden bg-dark-100 px-40 text-light-100">
-      <div className="flex justify-between items-center border-b border-light-100/20 py-12">
+      <div className="flex justify-between items-center border-b border-light-100/20 py-10">
         <Link href="/">
           <Image
             src="/assets/shared/desktop/logo.svg"

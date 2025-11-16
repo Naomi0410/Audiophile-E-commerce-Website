@@ -5,8 +5,9 @@ import { productData } from "@/constants";
 import { useCartContext } from "@/context/CartProvider";
 import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
-import  { useState } from "react";
+import { useState } from "react";
 import { easeOut, motion } from "motion/react";
+import toast from "react-hot-toast";
 
 const ProductDetail = () => {
   const { slug } = useParams();
@@ -34,6 +35,17 @@ const ProductDetail = () => {
         price: individualProduct.price,
         quantity: itemQuantity,
       });
+ toast.success("Added to cart!", {
+  style: {
+    border: "4px solid",
+    borderImage: "linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet) 1",
+    background: "#1a1a1a", 
+    color: "#fff",
+    fontWeight: "bold",
+    borderRadius: "8px",
+  },
+});
+
     }
     setItemQuantity(1);
   };
@@ -108,7 +120,7 @@ const ProductDetail = () => {
 
           {/* clubbed features and in th box section for large screen */}
 
-          <div className="lg:flex items-start gap-32 lg:pt-40">
+          <div className="lg:flex items-start gap-32 lg:pt-28">
             <motion.section
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -149,7 +161,7 @@ const ProductDetail = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.9, ease: easeOut }}
-            className="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-22 lg:pt-40 sm:pt-28"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-20 lg:pt-28 sm:pt-20"
           >
             {/* first image */}
             <picture>
@@ -213,7 +225,7 @@ const ProductDetail = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.9, ease: easeOut }}
-            className="py-22 sm:py-28 lg:py-40 text-center"
+            className="py-20 lg:py-28 text-center"
           >
             <h2 className="h4-bold sm:h3-bold pb-12">you may also like</h2>
             <ul className="sm:flex items-center gap-3">

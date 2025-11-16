@@ -18,12 +18,12 @@ const CategoryPage = () => {
       <div className="bg-dark-100 text-light-100 text-center py-10 sm:py-24">
         <h2 className="h4-bold sm:h2-bold">{category}</h2>
       </div>
-      <section className="section-container pt-30">
+      <section className="section-container pt-20 lg:pt-28">
         <ul>
           {sortedProductDataByCategory.map((product) => (
             <li
               key={product.id}
-              className="pb-30 lg:pb-40 lg:flex items-center gap-32 lg:even:flex-row-reverse"
+              className="pb-20 lg:pb-28 lg:flex items-center gap-32 lg:even:flex-row-reverse"
             >
               <motion.picture
                 initial={{ opacity: 0, y: 20 }}

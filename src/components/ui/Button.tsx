@@ -6,6 +6,7 @@ interface ButtonProps {
   isLink?: boolean;
   route?: string;
   className?: string;
+  disabled?: boolean;
   action?: string;
   addToCartHandler?: () => void;
   handleBackToHome?: () => void;
@@ -19,6 +20,7 @@ const Button = ({
   label,
   isLink = false,
   route,
+  disabled,
   action,
   addToCartHandler,
   handleBackToHome,
@@ -46,6 +48,7 @@ const Button = ({
         <button
           type={typeButton || "button"}
           onClick={clickHandler}
+          disabled={disabled}
           className={buttonClass}
         >
           {label}

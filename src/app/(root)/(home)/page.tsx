@@ -1,7 +1,6 @@
 "use client";
 import Categories from "@/components/shared/Categories";
 import Button from "@/components/ui/Button";
-
 import Image from "next/image";
 import Link from "next/link";
 import { easeOut, motion } from "motion/react";
@@ -53,7 +52,7 @@ export default function Home() {
       </section>
 
       {/* category section */}
-      <section className="section-container py-30 lg:py-40">
+      <section className="section-container py-20 lg:py-28">
         <Categories />
       </section>
 

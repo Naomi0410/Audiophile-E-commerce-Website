@@ -9,7 +9,7 @@ const BrandDescription = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.9, ease: easeOut }}
-      className="section-container py-30 lg:py-40 lg:flex items-center gap-30"
+      className="section-container py-20 lg:py-28 lg:flex items-center gap-30"
     >
       <Image
         src="/assets/shared/mobile/image-best-gear.jpg"
