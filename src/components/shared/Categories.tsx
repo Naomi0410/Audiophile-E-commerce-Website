@@ -34,7 +34,7 @@ const Categories = () => {
                 className="flex text-[13px] text-dark-100/50 font-bold leading-[18px] tracking-[1px] uppercase justify-center items-center gap-2"
                 href={`/${category.name}`}
               >
-                <p>shop</p>{" "}
+                <p className="hover:text-primary-500 transition duration-150">shop</p>{" "}
                 <Image
                   src="/assets/shared/desktop/icon-arrow-right.svg"
                   alt="link"
